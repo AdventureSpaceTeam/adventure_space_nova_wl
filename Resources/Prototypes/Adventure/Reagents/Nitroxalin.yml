@@ -1,0 +1,55 @@
+- type: reagent
+  id: Nitroxalin
+  name: Нитроксалин
+  group: Medicine
+  desc: Необходим для восстановления уровня азота в крови.
+  physicalDesc: бесцветное
+  flavor: medicine
+  color: "#cbece2"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions: 
+        - !type:OrganType 
+          type: Vox
+          shouldHave: true
+        damage:
+          types:
+            Asphyxiation: -3.5
+      - !type:HealthChange
+        conditions: 
+        - !type:OrganType 
+          type: Zerah
+          shouldHave: true
+        damage:
+          types:
+            Asphyxiation: -3.5
+      - !type:HealthChange
+        conditions: 
+        - !type:OrganType 
+          type: Slime
+          shouldHave: true
+        damage:
+          types:
+            Asphyxiation: -3.5
+      - !type:HealthChange
+        conditions:
+          - !type:ReagentThreshold
+            min: 20
+        damage:
+          types:
+            Asphyxiation: 3
+            Cold: 1
+
+- type: reaction
+  id: Nitroxalin
+  minTemp: 320
+  reactants:
+    Nitrogen:
+      amount: 2
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+    Nitroxalin: 3
