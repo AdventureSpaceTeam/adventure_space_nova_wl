@@ -3,6 +3,9 @@
   startingInventory:
     HandheldHealthAnalyzer: 3
     Brutepack: 5
+    Gauze: 5 #Adventure
+    BrutepackBandage: 5 #Adventure
+    OintmentIce: 5 #Adventure
     Ointment: 5
     Bloodpack: 5
     EpinephrineChemistryBottle: 3

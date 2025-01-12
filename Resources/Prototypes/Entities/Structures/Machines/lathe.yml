@@ -914,6 +914,8 @@
       - Hemostat
       - ClothingEyesGlassesChemical
       - WhiteCane
+      - BrutepackBandage #Adventure
+      - OintmentIce #Adventure
     dynamicRecipes:
       - ChemicalPayload
       - CryostasisBeaker
