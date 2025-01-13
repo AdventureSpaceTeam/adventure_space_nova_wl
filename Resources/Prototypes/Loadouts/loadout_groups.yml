@@ -170,6 +170,7 @@
   minLimit: 0
   loadouts:
   - HoPWintercoat
+  - HoPCoat
 
 # Civilian
 - type: loadoutGroup
@@ -731,6 +732,7 @@
   - StationEngineerHardhatYellow
   - StationEngineerHardhatOrange
   - StationEngineerHardhatRed
+  - Engineeringsoft # Adventure
   - SeniorEngineerBeret
 
 - type: loadoutGroup
@@ -740,6 +742,7 @@
   - StationEngineerJumpsuit
   - StationEngineerJumpskirt
   - StationEngineerHazardsuit
+  - EngineeringWorkUniform # Adventure
   - SeniorEngineerJumpsuit
   - SeniorEngineerJumpskirt
 
@@ -758,6 +761,7 @@
   loadouts:
   - StationEngineerOuterVest
   - StationEngineerWintercoat
+  - EngineeringJacket # Adventure
 
 - type: loadoutGroup
   id: StationEngineerShoes
@@ -780,6 +784,7 @@
   - AtmosphericTechnicianJumpsuit
   - AtmosphericTechnicianJumpskirt
   - AtmosphericTechnicianJumpsuitCasual
+  - AtmosWorkUniform # Adventure
 
 - type: loadoutGroup
   id: AtmosphericTechnicianOuterClothing
