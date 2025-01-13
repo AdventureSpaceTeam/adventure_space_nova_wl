@@ -2,11 +2,11 @@
   id: NanoMedPlusInventory
   startingInventory:
     HandheldHealthAnalyzer: 3
-    Brutepack: 5
-    Gauze: 5 #Adventure
-    BrutepackBandage: 5 #Adventure
-    OintmentIce: 5 #Adventure
-    Ointment: 5
+    Brutepack: 2 #Adventure
+    Gauze: 2 #Adventure
+    BrutepackBandage: 2 #Adventure
+    OintmentIce: 2 #Adventure
+    Ointment: 2 #Adventure
     Bloodpack: 5
     EpinephrineChemistryBottle: 3
     Syringe: 5

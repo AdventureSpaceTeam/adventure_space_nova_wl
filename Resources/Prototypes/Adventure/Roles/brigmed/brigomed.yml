@@ -44,9 +44,9 @@
     HandheldHealthAnalyzer: 1
     EmergencyMedipen: 1
     Brutepack: 2
-    Gauze: 5 #Adventure
-    BrutepackBandage: 5 #Adventure
-    OintmentIce: 5 #Adventure
+    Gauze: 2
+    BrutepackBandage: 2
+    OintmentIce: 2
     Ointment: 2
     Bloodpack: 2
     Tourniquet: 2
