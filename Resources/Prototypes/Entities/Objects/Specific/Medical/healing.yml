@@ -34,7 +34,7 @@
     damage:
       types:
         Heat: -5
-        Shock: -1
+        Shock: -2
         Caustic: -1
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
@@ -86,7 +86,7 @@
     damage:
       types:
         Heat: -10
-        Shock: -2
+        Shock: -4
         Caustic: -10
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
@@ -127,6 +127,7 @@
     damage:
       types:
         Blunt: -5
+        Barotrauma: -2
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:

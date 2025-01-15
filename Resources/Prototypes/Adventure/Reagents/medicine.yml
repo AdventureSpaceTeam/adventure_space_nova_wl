@@ -57,8 +57,8 @@
 
 #Криобиозин
 - type: reagent
-  id: Cryobiosine
-  name: Криобиозин
+  id: Barotrasine
+  name: Баротразин
   group: Medicine
   desc: Используется для восстановления органических тканей после экстримального давления.
   physicalDesc: мутное
@@ -77,7 +77,7 @@
               Barotrauma: -4
 
 - type: reaction
-  id: Cryobiosine
+  id: Barotrasine
   minTemp: 320
   reactants:
     Bruizine:
@@ -88,39 +88,4 @@
       amount: 1
       catalyst: true
   products:
-    Cryobiosine: 1
-
-#Инсузилин
-- type: reagent
-  id: Insuline
-  name: Инсузилин
-  group: Medicine
-  desc: Восстанавливает нервную активность после её уничтожения электричеством.
-  physicalDesc: низковольтное
-  flavor: medicine
-  color: "#c7adff"
-  worksOnTheDead: true # лечит мёртвых, чтобы не было гиб абуза через электрорешётку
-  metabolisms:
-    Medicine:
-      effects:
-        - !type:HealthChange
-          conditions:
-          - !type:Temperature
-            max: 175.15
-          damage:
-            types:
-              Shock: -4
-
-- type: reaction
-  id: Insuline
-  minTemp: 320
-  reactants:
-    Insuzine:
-      amount: 1
-    Cryoxadone:
-      amount: 1
-    Plasma:
-      amount: 1
-      catalyst: true
-  products:
-    Insuline: 1
+    Barotrasine: 1

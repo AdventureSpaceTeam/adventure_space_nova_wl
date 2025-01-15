@@ -141,6 +141,7 @@
     damage:
       types:
         Blunt: -10
+        Barotrauma: -4
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
