@@ -93,20 +93,52 @@ public sealed class ACVars : CVars
     public static readonly CVarDef<bool> TTSClientEnabled =
         CVarDef.Create("tts.client_enabled", true, CVar.CLIENTONLY | CVar.ARCHIVE);
 
-
-    /*
-     * Sponsor API
-     */
-
-    public static readonly CVarDef<string> SponsorApiUrl =
-        CVarDef.Create("sponsor.api_url", "", CVar.SERVERONLY);
-
-    public static readonly CVarDef<string> SponsorApiToken =
-        CVarDef.Create("sponsor.api_token", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
-
     /// <summary>
     /// Start map and preset votes in lobby automatically.
     /// </summary>
     public static readonly CVarDef<bool> LobbyVote =
         CVarDef.Create("game.lobby_vote", true, CVar.SERVER | CVar.REPLICATED | CVar.ARCHIVE);
+
+    /*
+     * Discord
+     */
+
+    /// <summary>
+    /// URL of the discord webhook to relay bans messages.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordBanWebhook =
+        CVarDef.Create("discord.ban_webhook", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    /*
+     * Discord sponsors
+     */
+
+    public static readonly CVarDef<string> DiscordSponsorsGuildId =
+        CVarDef.Create("discord_sponsors.guild_id", string.Empty, CVar.SERVERONLY);
+
+    public static readonly CVarDef<string> DiscordSponsorsBotToken =
+        CVarDef.Create("discord_sponsors.bot_token", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    /*
+     * Discord auth
+     */
+
+    public static readonly CVarDef<bool> DiscordAuthEnabled =
+        CVarDef.Create("discord_auth.enabled", false, CVar.SERVERONLY);
+
+    // Doesn't hot-reload, you need to restart server when this value changes.
+    public static readonly CVarDef<string> DiscordAuthListeningUrl =
+        CVarDef.Create("discord_auth.listening_url", "http://localhost:3963/", CVar.SERVERONLY);
+
+    public static readonly CVarDef<string> DiscordAuthRedirectUrl =
+        CVarDef.Create("discord_auth.redirect_url", "http://localhost:3963/", CVar.SERVERONLY);
+
+    public static readonly CVarDef<string> DiscordAuthClientId =
+        CVarDef.Create("discord_auth.client_id", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    public static readonly CVarDef<string> DiscordAuthClientSecret =
+        CVarDef.Create("discord_auth.client_secret", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    public static readonly CVarDef<string> DiscordAuthDebugApiUrl =
+        CVarDef.Create("discord_auth.debug_api_url", "https://discord.com/api/v10", CVar.SERVERONLY);
 }

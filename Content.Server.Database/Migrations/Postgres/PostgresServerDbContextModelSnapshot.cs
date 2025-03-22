@@ -20,7 +20,7 @@ namespace Content.Server.Database.Migrations.Postgres
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.0")
+                .HasAnnotation("ProductVersion", "9.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -35,6 +35,14 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.Property<int?>("AdminRankId")
                         .HasColumnType("integer")
                         .HasColumnName("admin_rank_id");
+
+                    b.Property<bool>("Deadminned")
+                        .HasColumnType("boolean")
+                        .HasColumnName("deadminned");
+
+                    b.Property<bool>("Suspended")
+                        .HasColumnType("boolean")
+                        .HasColumnName("suspended");
 
                     b.Property<string>("Title")
                         .HasColumnType("text")
@@ -275,8 +283,7 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("expiration_time");
 
-                    b.Property<DateTime?>("LastEditedAt")
-                        .IsRequired()
+                    b.Property<DateTime>("LastEditedAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("last_edited_at");
 
@@ -410,8 +417,7 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("expiration_time");
 
-                    b.Property<DateTime?>("LastEditedAt")
-                        .IsRequired()
+                    b.Property<DateTime>("LastEditedAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("last_edited_at");
 
@@ -732,6 +738,10 @@ namespace Content.Server.Database.Migrations.Postgres
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("DiscordId")
+                        .HasColumnType("text")
+                        .HasColumnName("discord_id");
+
                     b.Property<DateTime>("FirstSeenTime")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("first_seen_time");
@@ -755,7 +765,6 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnName("last_seen_user_name");
 
                     b.Property<string>("SponsorTier")
-                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("sponsor_tier");
 
@@ -976,6 +985,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnName("profile_role_loadout_id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("EntityName")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)")
+                        .HasColumnName("entity_name");
 
                     b.Property<int>("ProfileId")
                         .HasColumnType("integer")

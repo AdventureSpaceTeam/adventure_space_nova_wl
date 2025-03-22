@@ -68,6 +68,7 @@
     shiveringHeatRegulation: 500
     normalBodyTemperature: 293.15 # температура тела не поднимается сама по себе.
     thermalRegulationTemperatureThreshold: 25
+  - type: NoInteractionInHands
   - type: Temperature
     heatDamageThreshold: 298.15 # 25с - начинаем получать урон.
     coldDamageThreshold: 213
@@ -149,6 +150,16 @@
           32:
             sprite: Adventure/Races/Resomi/displacement.rsi
             state: back
+      brass:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
+      pants:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
     maleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -175,6 +186,16 @@
           32:
             sprite: Adventure/Races/Resomi/displacement.rsi
             state: back
+      brass:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
+      pants:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
 
 - type: entity
   parent: BaseSpeciesDummy
@@ -210,6 +231,16 @@
           32:
             sprite: Adventure/Races/Resomi/displacement.rsi
             state: back
+      brass:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
+      pants:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
     maleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -236,3 +267,13 @@
           32:
             sprite: Adventure/Races/Resomi/displacement.rsi
             state: back
+      brass:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit
+      pants:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/Resomi/displacement.rsi
+            state: jumpsuit

@@ -25,7 +25,7 @@
         shape:
           !type:PhysShapeCircle
           radius: 0.35
-        density: 150
+        density: 1000 # Adventure
         mask:
         - MobMask
         layer:
@@ -156,9 +156,11 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Borg
+    allowedEmotes: ['Crash', 'Reboot', 'Load'] # Adventure
   - type: Vocal
     sounds:
       Unsexed: UnisexSilicon
+    screamAction: null
   - type: UnblockableSpeech
   - type: FootstepModifier
     footstepSoundCollection:
@@ -171,7 +173,6 @@
     - cell_slot
   - type: Lock
     locked: true
-    breakOnEmag: false
     unlockOnClick: false
   - type: ActivatableUIRequiresLock
   - type: LockedWiresPanel
@@ -252,6 +253,7 @@
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
   - type: TTS # c4llv07e tts
     voice: glados # TODO(c4): fix voice
+  - type: Climbing # Adventure
 
 - type: entity
   abstract: true
@@ -289,7 +291,7 @@
   components:
   - type: RandomMetadata
     nameSegments:
-      - names_borg
+    - NamesBorg
   - type: NpcFactionMember
     factions:
     - NanoTrasen
@@ -297,6 +299,8 @@
     enabled: false
     groups:
     - AllAccess
+    tags:
+    - Borg
   - type: AccessReader
     access: [["Command"], ["Research"]]
   - type: ShowJobIcons
@@ -338,6 +342,7 @@
   - type: MovementAlwaysTouching
   - type: Speech
     speechSounds: SyndieBorg
+    allowedEmotes: ['Crash', 'Reboot', 'Load'] # Adventure
   - type: Vocal
     sounds:
       Unsexed: UnisexSiliconSyndicate

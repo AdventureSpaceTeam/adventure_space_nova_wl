@@ -50,7 +50,16 @@ marking-LizardSnoutHigh-snout_high = Унатх, Морда (Высокая)
 marking-LizardSnoutHigh = Унатх, Морда (Высокая)
 marking-LizardChestUnderbellyF-body_underbelly_f = Унатх, тело (женское подбрюшье)
 marking-LizardChestUnderbellyF = Унатх, тело (женское подбрюшье)
-
+marking-LizardTailSpike-tail_spike = Унатх, хвост (Шипастый)
+marking-LizardTailSpike = Унатх, хвост (Шипастый)
+marking-LizardHornsFullSpike-full_spike = Унатх, рожки (Шипастая голова)
+marking-LizardHornsFullSpike = Унатх, рожки (Шипастая голова)
+marking-LizardHornsLittleTrike-little_trike = Унатх, рожки (Маленький рог)
+marking-LizardHornsLittleTrike = Унатх, рожки (Маленький рог)
+marking-LizardTailOverBig-tail_big = Унатх, хвост (Длинный)
+marking-LizardTailOverBig = Унатх, хвост (Длинный)
+marking-LizardTailOverBigSpike-tail_big_spike = Унатх, хвост (Длинный с шипами)
+marking-LizardTailOverBigSpike = Унатх, хвост (Длинный с шипами)
 
 
 

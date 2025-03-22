@@ -4,7 +4,7 @@
   name: Троичный
   keycode: '+'
   frequency: 123
-  color: "#4df9ef"
+  color: "#4bced0"
   longRange: true
 
 - type: entity
@@ -12,6 +12,33 @@
   name: Урист макКПБ
   parent: BaseMobSynth
   id: MobSynth
+  components:
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot 
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: true
+  - type: ItemToggle
+    onActivate: false 
+    activated: false 
+    onUse: false 
+  - type: PowerCellDraw
+    drawRate: 1.1
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+        locked: true
+  - type: Synth
+  - type: PassiveDamage
+    allowedStates:
+    - Critical
+    damageCap: 200
+    damage:
+      types:
+        Shock: 1.0
 
 - type: entity
   abstract: true
@@ -33,6 +60,17 @@
       methods: [ Touch ]
       effects:
       - !type:WashCreamPieReaction
+      - !type:Electrocute
+        probability: 0.05
+      - !type:Emote
+        emote: Crash
+        showInChat: true
+        probability: 0.1
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "Вода попадает в ваши схемы, приводя к замыканию" ]
+        probability: 0.1
     - reagents: [ SpaceLube ]
       methods: [ Touch ]
       effects: 
@@ -46,8 +84,6 @@
         visualType: Large
         messages: [ "Обледенение отпадает от вашего корпуса" ]
         probability: 0.25
-  - type: Inventory
-    templateId: Synth
   - type: ThermalRegulator
     metabolismHeat: 800
     radiatedHeat: 100
@@ -179,7 +215,7 @@
   - type: Speech
     speechVerb: Electricity
     speechSounds: SyndieBorg
-    allowedEmotes: ['Crash']
+    allowedEmotes: ['Crash', 'Reboot', 'Load']
   - type: ZombieImmune
   - type: Vocal
     sounds:
@@ -218,6 +254,14 @@
   - type: GuideHelp
     guides:
     - Species
+  - type: Inventory
+    templateId: Synth
+    displacements:
+      pants:
+        sizeMaps:
+          32:
+            sprite: Adventure/Races/IPC/displacement.rsi
+            state: pants
 
 - type: entity
   parent: BaseSpeciesDummy
@@ -226,3 +270,11 @@
   components:
     - type: HumanoidAppearance
       species: Synth
+    - type: Inventory
+      templateId: Synth
+      displacements:
+        pants:
+          sizeMaps:
+            32:
+              sprite: Adventure/Races/IPC/displacement.rsi
+              state: pants

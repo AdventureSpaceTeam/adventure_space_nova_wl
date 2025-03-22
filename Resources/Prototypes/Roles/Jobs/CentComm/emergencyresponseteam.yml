@@ -29,6 +29,7 @@
     belt: ClothingBeltSecurityFilled
     pocket1: WeaponPistolN1984
     pocket2: FlashlightSeclite
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - WeaponDisabler
@@ -53,6 +54,7 @@
     belt: ClothingBeltSecurityFilled
     pocket1: WeaponPistolN1984
     pocket2: FlashlightSeclite
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - WeaponDisabler
@@ -77,6 +79,7 @@
     belt: ClothingBeltSecurityFilled
     pocket1: MagazineRifle
     pocket2: MagazineRifle
+    ipc: IPCModulSec # Adventure-IPC
   inhand:
   - WeaponRifleLecter
   storage:
@@ -124,6 +127,7 @@
     belt: ClothingBeltStorageWaistbag
     pocket1: Flare
     pocket2: DrinkWaterBottleFull
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - BoxCandle
@@ -155,6 +159,7 @@
     belt: ClothingBeltStorageWaistbag
     pocket1: Flare
     pocket2: DrinkWaterBottleFull
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - BoxCandle
@@ -201,6 +206,7 @@
     belt: ClothingBeltChiefEngineerFilled
     pocket1: Flare
     pocket2: GasAnalyzer
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - trayScanner
@@ -229,6 +235,7 @@
     belt: ClothingBeltChiefEngineerFilled
     pocket1: Flare
     pocket2: GasAnalyzer
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - trayScanner
@@ -273,6 +280,7 @@
     belt: ClothingBeltSecurityFilled
     pocket1: WeaponPistolMk58
     pocket2: FlashlightSeclite
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - WeaponDisabler
@@ -297,6 +305,7 @@
     belt: ClothingBeltSecurityFilled
     pocket1: WeaponPistolMk58
     pocket2: FlashlightSeclite
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - WeaponDisabler
@@ -321,6 +330,7 @@
     belt: ClothingBeltSecurityFilled
     pocket1: MagazineRifle
     pocket2: MagazineRifle
+    ipc: IPCModulSec # Adventure-IPC
   inhand:
     - WeaponRifleLecter
   storage:
@@ -362,10 +372,12 @@
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltMedicalFilled
     pocket1: Flare
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - Hypospray
-    - MedkitAdvancedFilled
+    - MedkitCombatFilled
+    - MedkitCombatFilled
     - CrowbarRed
     - OmnizineChemistryBottle
     - EpinephrineChemistryBottle
@@ -385,10 +397,12 @@
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltMedicalFilled
     pocket1: Flare
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - Hypospray
-    - MedkitAdvancedFilled
+    - MedkitCombatFilled
+    - MedkitCombatFilled
     - CrowbarRed
     - OmnizineChemistryBottle
     - EpinephrineChemistryBottle
@@ -423,6 +437,7 @@
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltJanitorFilled
     pocket1: Flare
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - LightReplacer
@@ -445,6 +460,7 @@
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltJanitorFilled
     pocket1: Flare
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - LightReplacer

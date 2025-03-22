@@ -49,7 +49,7 @@ public sealed class NukeSystem : EntitySystem
     ///     Used to calculate when the nuke song should start playing for maximum kino with the nuke sfx
     /// </summary>
     private float _nukeSongLength;
-    private string _selectedNukeSong = String.Empty;
+    private ResolvedSoundSpecifier _selectedNukeSong = String.Empty;
 
     /// <summary>
     ///     Time to leave between the nuke song and the nuke alarm playing.
@@ -168,21 +168,12 @@ public sealed class NukeSystem : EntitySystem
         if (component.Status == NukeStatus.ARMED)
             return;
 
-        // Nuke has to have the disk in it to be moved
-        if (!component.DiskSlot.HasItem)
-        {
-            var msg = Loc.GetString("nuke-component-cant-anchor-toggle");
-            _popups.PopupEntity(msg, uid, args.Actor, PopupType.MediumCaution);
-            return;
-        }
-
         // manually set transform anchor (bypassing anchorable)
         // todo: it will break pullable system
         var xform = Transform(uid);
         if (xform.Anchored)
         {
             _transform.Unanchor(uid, xform);
-            _itemSlots.SetLock(uid, component.DiskSlot, true);
         }
         else
         {
@@ -204,7 +195,6 @@ public sealed class NukeSystem : EntitySystem
 
             _transform.SetCoordinates(uid, xform, xform.Coordinates.SnapToGrid());
             _transform.AnchorEntity(uid, xform);
-            _itemSlots.SetLock(uid, component.DiskSlot, false);
         }
 
         UpdateUserInterface(uid, component);
@@ -302,7 +292,7 @@ public sealed class NukeSystem : EntitySystem
 
         // Start playing the nuke event song so that it ends a couple seconds before the alert sound
         // should play
-        if (nuke.RemainingTime <= _nukeSongLength + nuke.AlertSoundTime + NukeSongBuffer && !nuke.PlayedNukeSong && !string.IsNullOrEmpty(_selectedNukeSong))
+        if (nuke.RemainingTime <= _nukeSongLength + nuke.AlertSoundTime + NukeSongBuffer && !nuke.PlayedNukeSong && !ResolvedSoundSpecifier.IsNullOrEmpty(_selectedNukeSong))
         {
             _sound.DispatchStationEventMusic(uid, _selectedNukeSong, StationEventMusicType.Nuke);
             nuke.PlayedNukeSong = true;
@@ -311,7 +301,7 @@ public sealed class NukeSystem : EntitySystem
         // play alert sound if time is running out
         if (nuke.RemainingTime <= nuke.AlertSoundTime && !nuke.PlayedAlertSound)
         {
-            _sound.PlayGlobalOnStation(uid, _audio.GetSound(nuke.AlertSound), new AudioParams{Volume = -5f});
+            _sound.PlayGlobalOnStation(uid, _audio.ResolveSound(nuke.AlertSound), new AudioParams{Volume = -5f});
             _sound.StopStationEventMusic(uid, StationEventMusicType.Nuke);
             nuke.PlayedAlertSound = true;
             UpdateAppearance(uid, nuke);
@@ -469,7 +459,7 @@ public sealed class NukeSystem : EntitySystem
         var posText = $"({x}, {y})";
 
         // We are collapsing the randomness here, otherwise we would get separate random song picks for checking duration and when actually playing the song afterwards
-        _selectedNukeSong = _audio.GetSound(component.ArmMusic);
+        _selectedNukeSong = _audio.ResolveSound(component.ArmMusic);
 
         // warn a crew
         var announcement = Loc.GetString("nuke-component-announcement-armed",
@@ -478,7 +468,7 @@ public sealed class NukeSystem : EntitySystem
         var sender = Loc.GetString("nuke-component-announcement-sender");
         _chatSystem.DispatchStationAnnouncement(stationUid ?? uid, announcement, sender, false, null, Color.Red);
 
-        _sound.PlayGlobalOnStation(uid, _audio.GetSound(component.ArmSound));
+        _sound.PlayGlobalOnStation(uid, _audio.ResolveSound(component.ArmSound));
         _nukeSongLength = (float) _audio.GetAudioLength(_selectedNukeSong).TotalSeconds;
 
         // turn on the spinny light
@@ -519,8 +509,11 @@ public sealed class NukeSystem : EntitySystem
         _chatSystem.DispatchStationAnnouncement(uid, announcement, sender, false);
 
         component.PlayedNukeSong = false;
-        _sound.PlayGlobalOnStation(uid, _audio.GetSound(component.DisarmSound));
+        _sound.PlayGlobalOnStation(uid, _audio.ResolveSound(component.DisarmSound));
         _sound.StopStationEventMusic(uid, StationEventMusicType.Nuke);
+
+        // reset nuke remaining time to either itself or the minimum time, whichever is higher
+        component.RemainingTime = Math.Max(component.RemainingTime, component.MinimumTime);
 
         // disable sound and reset it
         component.PlayedAlertSound = false;

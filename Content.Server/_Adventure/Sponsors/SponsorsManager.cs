@@ -1,4 +1,5 @@
 using Content.Server.Database;
+using Content.Server._Adventure.DiscordAuth;
 using Content.Shared.CCVar;
 using Content.Shared._Adventure.ACVar;
 using Content.Shared._Adventure.Sponsors;
@@ -15,6 +16,7 @@ using System.Net.Http.Json;
 using System.Net.Http;
 using System.Net;
 using System.Text.Json.Serialization;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Content.Server._Adventure.Sponsors;
@@ -28,25 +30,19 @@ public sealed class SponsorsManager : ISponsorsManager
     [Dependency] private readonly IServerNetManager _net = default!;
 
     private ISawmill _sawmill = default!;
-    private readonly HttpClient _httpClient = new()
-    {
-        Timeout = TimeSpan.FromSeconds(5)
-    };
-    private string _apiUrl = string.Empty;
+    private string _guildId = string.Empty;
+    private string _botToken = string.Empty;
 
     [ViewVariables(VVAccess.ReadWrite)]
-    public readonly Dictionary<NetUserId, SponsorTierPrototype> Sponsors = new();
+    public readonly Dictionary<NetUserId, SponsorTierPrototype?> Sponsors = new();
 
     public Action<INetChannel, ProtoId<SponsorTierPrototype>>? OnSponsorConnected = null;
 
     public void Initialize()
     {
         _sawmill = Logger.GetSawmill("sponsors");
-        _cfg.OnValueChanged(ACVars.SponsorApiUrl, s => _apiUrl = s, true);
-        _cfg.OnValueChanged(ACVars.SponsorApiToken, v =>
-        {
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", v);
-        }, true);
+        _cfg.OnValueChanged(ACVars.DiscordSponsorsGuildId, s => _guildId = s, true);
+        _cfg.OnValueChanged(ACVars.DiscordSponsorsBotToken, s => _botToken = s, true);
         _net.Connecting += OnConnecting;
         _net.Connected += OnConnected;
     }
@@ -68,7 +64,7 @@ public sealed class SponsorsManager : ISponsorsManager
 
     private void OnConnected(object? sender, NetChannelArgs e)
     {
-        if (!Sponsors.TryGetValue(e.Channel.UserId, out var sponsor))
+        if (!Sponsors.TryGetValue(e.Channel.UserId, out var sponsor) || sponsor is null)
             return;
         _sawmill.Debug($"Sponsor connected, invoking connection action");
         OnSponsorConnected?.Invoke(e.Channel, sponsor.ID);
@@ -79,50 +75,41 @@ public sealed class SponsorsManager : ISponsorsManager
         var player = await _db.GetPlayerRecordByUserId(userId);
         if (player != null && !string.IsNullOrEmpty(player.SponsorTier))
             return player.SponsorTier;
-        if (string.IsNullOrEmpty(_apiUrl))
+        if (string.IsNullOrEmpty(player?.DiscordId)) // ds auth probably disabled
+            return null;
+        if (string.IsNullOrEmpty(_guildId) || string.IsNullOrEmpty(_botToken))
             return null;
 
-        var url = $"{_apiUrl}/sponsors/?user_id={userId.ToString()}&";
-        try {
-            var response = await _httpClient.GetAsync(url);
-            if (response.StatusCode == HttpStatusCode.NotFound)
-                return null;
-
-            if (response.StatusCode != HttpStatusCode.OK)
+        using var getMemberMsg = new HttpRequestMessage(HttpMethod.Get, $"guilds/{_guildId}/members/{player.DiscordId}");
+        getMemberMsg.Headers.Authorization = new AuthenticationHeaderValue("Bot", _botToken);
+        using HttpResponseMessage memberResp = await DiscordAuthBotManager.discordClient.SendAsync(getMemberMsg);
+        var memberRespStr = await memberResp.Content.ReadAsStringAsync();
+        var res = JsonSerializer.Deserialize<MemberResponse>(memberRespStr);
+        foreach (var sponsorTier in _proto.EnumeratePrototypes<SponsorTierPrototype>())
+        {
+            if ((sponsorTier.DiscordRoleId is not null) && (res?.roles?.Contains(sponsorTier.DiscordRoleId) ?? false))
             {
-                var errorText = await response.Content.ReadAsStringAsync();
-                _sawmill.Error(
-                    "Failed to get player sponsor info from API: [{StatusCode}] {Response}",
-                    response.StatusCode,
-                    errorText);
-                return null;
+                _sawmill.Fatal($"Player {userId} got sponsor protoid \"{sponsorTier.ID}\"");
+                return sponsorTier.ID;
             }
-
-            var info = await response.Content.ReadFromJsonAsync<SponsorInfo>();
-            return info?.Title;
-        } catch (TaskCanceledException e) {
-            _sawmill.Error(
-                $"Can't access sponsor server. Is it down? {e}");
-            return null;
         }
+        return null;
     }
 
     public int GetAdditionalCharacterSlots(NetUserId userId)
     {
-        if (!Sponsors.TryGetValue(userId, out var tier))
+        if (!Sponsors.TryGetValue(userId, out var tier) || tier is null)
             return 0;
         return tier.AdditionalCharacterSlots;
     }
 
-    public SponsorTierPrototype? GetSponsor(NetUserId userId)
+    public SponsorTierPrototype? GetSponsor(NetUserId? userId)
     {
-        Sponsors.TryGetValue(userId, out var sponsor);
+        if (userId is null)
+            return null;
+        Sponsors.TryGetValue(userId.Value, out var sponsor);
         return sponsor;
     }
 }
 
-public sealed class SponsorInfo
-{
-    [JsonPropertyName("title")]
-    public string? Title { get; set; }
-}
+public record class MemberResponse(List<string>? roles);

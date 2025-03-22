@@ -52,7 +52,7 @@ ent-BotanistIDCard = ID карта ботаника
     .desc = { ent-IDCardStandard.desc }
 ent-LibrarianIDCard = ID карта библиотекаря
     .desc = { ent-IDCardStandard.desc }
-ent-LawyerIDCard = ID карта адвоката
+ent-LawyerIDCard = ID карта юриста
     .desc = { ent-IDCardStandard.desc }
 ent-HoPIDCard = ID карта главы персонала
     .desc = { ent-IDCardStandard.desc }
@@ -125,3 +125,9 @@ ent-SeniorOfficerIDCard = ID карта инструктора СБ
 ent-UniversalIDCard = универсальная ID карта
     .desc = ID карта, которая позволит вам осуществить свои самые сокровенные желания.
     .suffix = Админ
+
+# Adventure
+ent-CLEAIDCard = ID карта Солдата ЦСС
+    .desc = { ent-IDCardStandard.desc }
+ent-CLEAOfficerIDCard = ID карта Солдата ЦСС
+    .desc = { ent-IDCardStandard.desc }

@@ -482,6 +482,12 @@ namespace Content.Server.Database
         public string RoleName { get; set; } = string.Empty;
 
         /// <summary>
+        /// Custom name of the role loadout if it supports it.
+        /// </summary>
+        [MaxLength(256)]
+        public string? EntityName { get; set; }
+
+        /// <summary>
         /// Store the saved loadout groups. These may get validated and removed when loaded at runtime.
         /// </summary>
         public List<ProfileLoadoutGroup> Groups { get; set; } = new();
@@ -591,7 +597,8 @@ namespace Content.Server.Database
         public List<RoleWhitelist> JobWhitelists { get; set; } = null!;
 
         // Adventure model begin
-        public string SponsorTier { get; set; } = null!;
+        public string? SponsorTier { get; set; } = null!; // adventure sponsor api
+        public string? DiscordId { get; set; } = null!; // adventure discord auth
         // Adventure model end
     }
 
@@ -614,6 +621,16 @@ namespace Content.Server.Database
     {
         [Key] public Guid UserId { get; set; }
         public string? Title { get; set; }
+
+        /// <summary>
+        /// If true, the admin is voluntarily deadminned. They can re-admin at any time.
+        /// </summary>
+        public bool Deadminned { get; set; }
+
+        /// <summary>
+        /// If true, the admin is suspended by an admin with <c>PERMISSIONS</c>. They will not have in-game permissions.
+        /// </summary>
+        public bool Suspended { get; set; }
 
         public int? AdminRankId { get; set; }
         public AdminRank? AdminRank { get; set; }
@@ -968,14 +985,16 @@ namespace Content.Server.Database
         Full = 2,
         Panic = 3,
         /*
-         * TODO: Remove baby jail code once a more mature gateway process is established. This code is only being issued as a stopgap to help with potential tiding in the immediate future.
-         *
          * If baby jail is removed, please reserve this value for as long as can reasonably be done to prevent causing ambiguity in connection denial reasons.
          * Reservation by commenting out the value is likely sufficient for this purpose, but may impact projects which depend on SS14 like SS14.Admin.
+         *
+         * Edit: It has
          */
         BabyJail = 4,
         /// Results from rejected connections with external API checking tools
         IPChecks = 5,
+        /// Results from rejected connections who are authenticated but have no modern hwid associated with them.
+        NoHwid = 6
     }
 
     public class ServerBanHit

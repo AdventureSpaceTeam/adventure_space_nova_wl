@@ -11,8 +11,10 @@
   - type: Body
     prototype: Vox
     requiredLegs: 2
-  - type:  HumanoidAppearance
+  - type: HumanoidAppearance
     species: Vox
+    undergarmentTop: UndergarmentTopTanktopVox
+    undergarmentBottom: UndergarmentBottomBoxersVox
     #- type: VoxAccent # Not yet coded
   - type: Speech
     speechVerb: Vox
@@ -71,6 +73,12 @@
     - map: [ "enum.HumanoidVisualLayers.LArm" ]
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+#Adventure-slots-start
+    - map: ["brass"]
+    - map: ["pants"]
+#Adventure-slots-end
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
     - map: [ "jumpsuit" ]
     - map: [ "enum.HumanoidVisualLayers.LFoot" ]
     - map: [ "enum.HumanoidVisualLayers.RFoot" ]
@@ -79,8 +87,8 @@
     - map: [ "gloves" ]
     - map: [ "shoes" ]
     - map: [ "ears" ]
-    - map: [ "outerClothing" ]
     - map: [ "eyes" ]
+    - map: [ "outerClothing" ]
     - map: [ "belt" ]
     - map: [ "id" ]
     - map: [ "neck" ]
@@ -142,21 +150,33 @@
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
             state: shoes
+#Adventure-start
       belt:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vox/displacement.rsi # Adventure
+            sprite: Mobs/Species/Vox/displacement.rsi 
             state: belt
       neck:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vox/displacement.rsi # Adventure
+            sprite: Mobs/Species/Vox/displacement.rsi 
             state: neck
       outerClothing:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vox/displacement.rsi # Adventure
+            sprite: Mobs/Species/Vox/displacement.rsi 
             state: outerClothing
+      brass:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
+      pants:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
+#Adventure-end
 
 - type: entity
   parent: BaseSpeciesDummy
@@ -165,6 +185,8 @@
   components:
   - type: HumanoidAppearance
     species: Vox
+    undergarmentTop: UndergarmentTopTanktopVox
+    undergarmentBottom: UndergarmentBottomBoxersVox
   - type: Body
     prototype: Vox
   - type: Inventory
@@ -205,18 +227,30 @@
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
             state: shoes
+#Adventure-start
       belt:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vox/displacement.rsi # Adventure
+            sprite: Mobs/Species/Vox/displacement.rsi 
             state: belt
       neck:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vox/displacement.rsi # Adventure
+            sprite: Mobs/Species/Vox/displacement.rsi 
             state: neck
       outerClothing:
         sizeMaps:
           32:
-            sprite: Mobs/Species/Vox/displacement.rsi # Adventure
+            sprite: Mobs/Species/Vox/displacement.rsi 
             state: outerClothing
+      brass:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
+      pants:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
+#Adventure-end

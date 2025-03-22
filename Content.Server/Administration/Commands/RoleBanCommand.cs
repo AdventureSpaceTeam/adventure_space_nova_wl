@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Content.Server._Adventure.Discord; // AdvSpace Discord Webhook
 using System.Text;
 using Content.Server.Administration.Managers;
 using Content.Shared.Administration;
@@ -7,14 +8,18 @@ using Content.Shared.Database;
 using Content.Shared.Roles;
 using Robust.Shared.Configuration;
 using Robust.Shared.Console;
+using Robust.Shared.Prototypes;
+
 namespace Content.Server.Administration.Commands;
 
 [AdminCommand(AdminFlags.Ban)]
 public sealed class RoleBanCommand : IConsoleCommand
 {
+    [Dependency] private readonly DiscordWebhookBanSender _DiscordWebhookBanSender = default!; // AdvSpace Discord Webhook
     [Dependency] private readonly IPlayerLocator _locator = default!;
     [Dependency] private readonly IBanManager _bans = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private readonly IPrototypeManager _proto = default!;
 
     public string Command => "roleban";
     public string Description => Loc.GetString("cmd-roleban-desc");
@@ -76,6 +81,12 @@ public sealed class RoleBanCommand : IConsoleCommand
                 return;
         }
 
+        if (!_proto.HasIndex<JobPrototype>(job))
+        {
+            shell.WriteError(Loc.GetString("cmd-roleban-job-parse",("job", job)));
+            return;
+        }
+
         var located = await _locator.LookupIdByNameOrIdAsync(target);
         if (located == null)
         {
@@ -87,6 +98,8 @@ public sealed class RoleBanCommand : IConsoleCommand
         var targetHWid = located.LastHWId;
 
         _bans.CreateRoleBan(targetUid, located.Username, shell.Player?.UserId, null, targetHWid, job, minutes, severity, reason, DateTimeOffset.UtcNow);
+
+        _DiscordWebhookBanSender.SendRoleBansMessage(target, targetUid, shell.Player?.Name, shell.Player?.UserId, minutes, reason, new List<string> { job }); // AdvSpace Discord Webhook
     }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

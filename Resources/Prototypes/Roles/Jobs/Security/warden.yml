@@ -3,10 +3,19 @@
   name: job-name-warden
   description: job-description-warden
   playTimeTracker: JobWarden
+  weight: 5
   requirements:
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
       time: 36000 #10 hrs
+# Adventure-edit-start
+    - !type:SpeciesRequirement
+      inverted: true
+      species:
+      - Zerah
+      - PigMan
+      - Vox
+# Adventure-edit-end
   startingGear: WardenGear
   icon: "JobIconWarden"
   supervisors: job-supervisors-hos
@@ -31,6 +40,7 @@
     id: WardenPDA
     ears: ClothingHeadsetSecurity
     pocket1: WeaponPistolMk58
+    ipc: IPCModulSec # Adventure-IPC
   storage:
     back:
     - Flash

@@ -1,6 +1,8 @@
+using Content.Server._Adventure.DiscordAuth; // adventure discord auth
 using Content.Server._Adventure.TTS; // c4llv07e tts
 using Content.Server._Adventure.Sponsors; // c4llv07e sponsors
 using Content.Shared._Adventure.Sponsors; // c4llv07e sponsors
+using Content.Server._RMC14.Mentor; // taken from RMC-14
 using Content.Server.Administration;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
@@ -33,6 +35,7 @@ using Content.Shared.Kitchen;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Players.RateLimiting;
 using Content.Server._Adventure; // AdvSpace Config
+using Content.Server._Adventure.Discord; // AdvSpace Discord Webhook
 
 namespace Content.Server.IoC
 {
@@ -40,11 +43,14 @@ namespace Content.Server.IoC
     {
         public static void Register()
         {
+            IoCManager.Register<DiscordAuthBotManager>(); // adventure discord auth
             IoCManager.Register<TTSManager>(); // c4llv07e tts
             IoCManager.Register<ISponsorsManager, SponsorsManager>(); // c4llv07e sponsors
             IoCManager.Register<SponsorsManager>(); // c4llv07e sponsors
             IoCManager.Register<AdventureConfigManager>(); // AdvSpace Config
             IoCManager.Register<AdventurePresetManager>(); // AdvSpace Preset
+            IoCManager.Register<DiscordWebhookBanSender>(); // AdvSpace Discord Webhook
+            IoCManager.Register<MentorManager>(); // Adventure mentor help
             IoCManager.Register<IChatManager, ChatManager>();
             IoCManager.Register<ISharedChatManager, ChatManager>();
             IoCManager.Register<IChatSanitizationManager, ChatSanitizationManager>();
@@ -82,7 +88,10 @@ namespace Content.Server.IoC
             IoCManager.Register<PlayerRateLimitManager>();
             IoCManager.Register<SharedPlayerRateLimitManager, PlayerRateLimitManager>();
             IoCManager.Register<MappingManager>();
+            IoCManager.Register<IWatchlistWebhookManager, WatchlistWebhookManager>();
             IoCManager.Register<ConnectionManager>();
+            IoCManager.Register<MultiServerKickManager>();
+            IoCManager.Register<CVarControlManager>();
         }
     }
 }

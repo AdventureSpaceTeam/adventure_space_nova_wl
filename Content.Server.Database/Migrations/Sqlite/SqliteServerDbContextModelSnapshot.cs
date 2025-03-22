@@ -15,7 +15,7 @@ namespace Content.Server.Database.Migrations.Sqlite
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
+            modelBuilder.HasAnnotation("ProductVersion", "9.0.1");
 
             modelBuilder.Entity("Content.Server.Database.Admin", b =>
                 {
@@ -27,6 +27,14 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Property<int?>("AdminRankId")
                         .HasColumnType("INTEGER")
                         .HasColumnName("admin_rank_id");
+
+                    b.Property<bool>("Deadminned")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("deadminned");
+
+                    b.Property<bool>("Suspended")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("suspended");
 
                     b.Property<string>("Title")
                         .HasColumnType("TEXT")
@@ -256,8 +264,7 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("expiration_time");
 
-                    b.Property<DateTime?>("LastEditedAt")
-                        .IsRequired()
+                    b.Property<DateTime>("LastEditedAt")
                         .HasColumnType("TEXT")
                         .HasColumnName("last_edited_at");
 
@@ -385,8 +392,7 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("expiration_time");
 
-                    b.Property<DateTime?>("LastEditedAt")
-                        .IsRequired()
+                    b.Property<DateTime>("LastEditedAt")
                         .HasColumnType("TEXT")
                         .HasColumnName("last_edited_at");
 
@@ -691,6 +697,10 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("INTEGER")
                         .HasColumnName("player_id");
 
+                    b.Property<string>("DiscordId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("discord_id");
+
                     b.Property<DateTime>("FirstSeenTime")
                         .HasColumnType("TEXT")
                         .HasColumnName("first_seen_time");
@@ -714,7 +724,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnName("last_seen_user_name");
 
                     b.Property<string>("SponsorTier")
-                        .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("sponsor_tier");
 
@@ -922,6 +931,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER")
                         .HasColumnName("profile_role_loadout_id");
+
+                    b.Property<string>("EntityName")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT")
+                        .HasColumnName("entity_name");
 
                     b.Property<int>("ProfileId")
                         .HasColumnType("INTEGER")

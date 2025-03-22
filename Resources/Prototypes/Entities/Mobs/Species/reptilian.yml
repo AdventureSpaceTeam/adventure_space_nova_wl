@@ -11,6 +11,7 @@
     - Snout
     - HeadTop
     - HeadSide
+    undergarmentBottom: UndergarmentBottomBoxersReptilian
   - type: Hunger
   - type: Puller
     needsHands: false
@@ -84,6 +85,13 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+#Adventure-Slots-start
+      brass:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+#Adventure-Slots-end
 
 
 - type: entity
@@ -98,6 +106,7 @@
     - Snout
     - HeadTop
     - HeadSide
+    undergarmentBottom: UndergarmentBottomBoxersReptilian
   - type: Inventory
     speciesId: reptilian
     femaleDisplacements:
@@ -106,5 +115,12 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+#Adventure-Slots-start
+      brass:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+#Adventure-Slots-end
 
 #Weh

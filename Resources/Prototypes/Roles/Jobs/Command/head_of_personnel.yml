@@ -29,6 +29,15 @@
       time: 18000 #5 hours # Adventure
     - !type:AgeRequirement
       requiredAge: 30 # Adventure
+# Adventure-edit-start
+    - !type:SpeciesRequirement
+      inverted: true
+      species:
+      - Synth
+      - Zerah
+      - PigMan
+      - Vox
+# Adventure-edit-end
   weight: 20
   startingGear: HoPGear
   icon: "JobIconHeadOfPersonnel"
@@ -76,6 +85,7 @@
     gloves: ClothingHandsGlovesHop
     ears: ClothingHeadsetAltCommand
     belt: BoxFolderClipboard
+    ipc: IPCModulCommand # Adventure-IPC
   storage:
     back:
     - Flash
