@@ -97,7 +97,7 @@
   - type: Barotrauma
     damage:
       types:
-        Blunt: 0.30
+        Barotrauma: 0.30
   - type: Temperature
     heatDamageThreshold: 773.15
     coldDamageThreshold: 173
@@ -191,6 +191,7 @@
     allowRevives: true
   - type: HealthExaminable
     examinableTypes:
+      - Barotrauma
       - Blunt
       - Slash
       - Piercing
