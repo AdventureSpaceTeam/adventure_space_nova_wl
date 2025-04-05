@@ -18,6 +18,14 @@
     {
       "name": "body_ridge",
       "directions": 4
+    },
+    {
+      "name": "body_ridge_double",
+      "directions": 4
+    },
+    {
+      "name": "body_ridge_small",
+      "directions": 4
     }
   ]
 }
