@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseItem
   id: ResearchDisk
-  name: research point disk (100) # Adventure
-  description: A disk for the R&D server containing 100 points. # Adventure
+  name: research point disk (250) # Adventure
+  description: A disk for the R&D server containing 250 points. # Adventure
   components:
   - type: Sprite
     sprite: Objects/Specific/Research/researchdisk.rsi
@@ -15,20 +15,20 @@
 - type: entity
   parent: ResearchDisk
   id: ResearchDisk5000
-  name: research point disk (500) # Adventure
-  description: A disk for the R&D server containing 500 points. # Adventure
+  name: research point disk (1250) # Adventure
+  description: A disk for the R&D server containing 1250 points. # Adventure
   components:
   - type: ResearchDisk
-    points: 500 # Adventure
+    points: 1250 # Adventure
 
 - type: entity
   parent: ResearchDisk
   id: ResearchDisk10000
-  name: research point disk (1000) # Adventure
-  description: A disk for the R&D server containing 1000 points. # Adventure
+  name: research point disk (2500) # Adventure
+  description: A disk for the R&D server containing 2500 points. # Adventure
   components:
   - type: ResearchDisk
-    points: 1000 # Adventure
+    points: 2500 # Adventure
 
 - type: entity
   parent: ResearchDisk
