@@ -64,7 +64,7 @@ public sealed partial class XenoArtifactNodeComponent : Component
     /// The amount of points a node is worth with no scaling
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float BasePointValue = 5000;
+    public float BasePointValue = 500; // Adventure RND nerf
 
     /// <summary>
     /// Amount of points available currently for extracting.
