@@ -8,13 +8,120 @@
   - type: Item
     size: Small
     sprite: Adventure/_CyberneticGenesis/androids/Objects/Specific/Medical/medical.rsi
-    heldPrefix: ointment
+    heldPrefix: toolpack
   # Inherited
   - type: StaticPrice
     price: 0
 
+- type: stack
+  id: ExtraAndroidPack
+  name: extraandroidpack
+  icon: { sprite: "Adventure/_CyberneticGenesis/androids/Objects/Specific/Medical/medical.rsi", state: emergencyandroid }
+  spawn: ExtraAndroidPack
+  maxCount: 4
+
+- type: stack
+  id: Nanopack
+  name: nanopack
+  icon: { sprite: "Adventure/_CyberneticGenesis/androids/Objects/Specific/Medical/medical.rsi", state: nanopack }
+  spawn: Nanopack
+  maxCount: 10
+  
+- type: stack
+  id: Tereumpack
+  name: tereumpack
+  icon: { sprite: "Adventure/_CyberneticGenesis/androids/Objects/Specific/Medical/medical.rsi", state: tereumpack }
+  spawn: Tereumpack
+  maxCount: 10
+  
+- type: stack
+  id: Toolpack
+  name: toolpack
+  icon: { sprite: "Adventure/_CyberneticGenesis/androids/Objects/Specific/Medical/medical.rsi", state: toolpack }
+  spawn: Toolpack
+  maxCount: 10
+  
+- type: stack
+  id: CauterizerAndroid
+  name: cauterizer
+  icon: { sprite: "Adventure/_CyberneticGenesis/androids/Objects/Specific/Medical/medical.rsi", state: cauterizer }
+  spawn: CauterizerAndroid
+  maxCount: 5
+  
 - type: entity
-  name: Нано Набор
+  name: Прижигатель
+  description: Прижигатель для андроидов, позволяющий быстро приварить рану.
+  parent: BaseHealingItemAndroid
+  id: CauterizerAndroid
+  suffix: Genesis_Dynamics
+  components:
+  - type: Tag
+    tags:
+    - Gauze
+  - type: Sprite
+    state: cauterizer
+  - type: Healing
+    damageContainers:
+      - Android
+    damage:
+      types:
+        Slash: -3
+        Piercing: -3
+    bloodlossModifier: -10
+    delay: 1.5
+    healingBeginSound:
+      path: "/Audio/Adventure/Weapon/Melee/fuelswords/welderactivate.ogg"
+      params:
+        volume: -5
+    healingEndSound:
+      path: "/Audio/Adventure/Weapon/Melee/fuelswords/welderdeactivate.ogg"
+      params:
+        variation: 0.250
+        volume: -5
+  - type: Stack
+    stackType: CauterizerAndroid
+    count: 5
+  - type: StackPrice
+    price: 5
+    
+- type: entity
+  name: экстренный набор восстановления андройдов
+  description: Экстренный набор содержащий мульти-инструмент с баком тереума, для быстрой починки андроида.
+  parent: BaseHealingItemAndroid
+  id: ExtraAndroidPack
+  suffix: Genesis_Dynamics
+  components:
+  - type: Tag
+    tags:
+    - Brutepack
+  - type: Sprite
+    state: emergencyandroid
+  - type: Healing
+    damageContainers:
+      - Android
+    damage:
+      groups:
+        Brute: -60
+      types:
+        Heat: -20
+        Cold: -20
+        Shock: -20
+        Bloodloss: -20
+    ModifyBloodLevel: 30
+    bloodlossModifier: -4
+    delay: 1
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+  - type: Stack
+    stackType: AndroidPack
+    count: 4
+  - type: StackPrice
+    price: 5
+
+- type: entity
+  name: нано набор
   description: Набор содержающий иструментальный аналог, излечивающий Андроида.
   parent: BaseHealingItemAndroid
   id: Nanopack
@@ -36,7 +143,7 @@
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
   - type: Stack
-    stackType: Brutepack
+    stackType: Nanopack
     count: 10
   - type: StackPrice
     price: 5
@@ -47,11 +154,11 @@
   suffix: Single
   components:
   - type: Stack
-    stackType: Brutepack
+    stackType: Nanopack
     count: 1
     
 - type: entity
-  name: Пакет тереума
+  name: пакет тереума
   description: Своейобразный пакет с кровью, но вместо него тереум позволяющий Андроидам работать.
   parent: BaseHealingItemAndroid
   id: Tereumpack
@@ -74,13 +181,13 @@
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
   - type: Stack
-    stackType: Bloodpack
+    stackType: Tereumpack
     count: 10
   - type: StackPrice
     price: 10
     
 - type: entity
-  name: Набор физлечения Андроидов
+  name: набор физлечения андроидов
   description: Специальный набор инструментов и жидкости для лечения физического урона Андроидов.
   parent: BaseHealingItemAndroid
   id: Toolpack
@@ -92,7 +199,7 @@
   - type: Sprite
     state: toolpack
   - type: Item
-    heldPrefix: ointment
+    heldPrefix: toolpack
   - type: Healing
     damageContainers:
       - Android
@@ -106,7 +213,7 @@
     healingEndSound:
       path: "/Audio/Items/Medical/ointment_end.ogg"
   - type: Stack
-    stackType: Ointment
+    stackType: Toolpack
     count: 10
   - type: StackPrice
     price: 5
@@ -117,5 +224,5 @@
   suffix: Single
   components:
   - type: Stack
-    stackType: Ointment
+    stackType: Toolpack
     count: 1
