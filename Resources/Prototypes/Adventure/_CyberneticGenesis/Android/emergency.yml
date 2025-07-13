@@ -3,7 +3,7 @@
   id: BoxSurvivalAndroid
   name: коробка выживания андроидов
   description: Коробка, с содержимым внутри
-  suffix: Standard
+  suffix: genesis_dynamics
   components:
   - type: StorageFill
     contents:
