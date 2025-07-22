@@ -285073,7 +285073,7 @@ entities:
     - type: Transform
       pos: -25.5,-9.5
       parent: 2
-- proto: PrinterDoc
+- proto: PrinPrinterterDoc
   entities:
   - uid: 4670
     components:
