@@ -7,9 +7,9 @@
   components:
   - type: StorageFill
     contents:
-    - id: ExtraAndroidPack
     - id: CauterizerAndroid
     - id: Tereumpack
+    - id: Toolpack
     - id: Nanopack
     - id: Flare
   - type: Sprite
