@@ -31,6 +31,7 @@
     - Inorganic
     - Silicon
     - Synth # Adventure
+    - Android #GenesisDynamics
 
 - type: entity
   parent: [ClothingEyesBase, ShowMedicalIcons]
@@ -195,6 +196,7 @@
     damageContainers:
     - Biological
     - Inorganic
+    - Android #GenesisDynamics
   - type: ShowHungerIcons
   - type: ShowThirstIcons
   - type: ShowSyndicateIcons
