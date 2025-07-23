@@ -68,7 +68,7 @@
         Slash: -3
         Piercing: -3
     bloodlossModifier: -10
-    delay: 1.5
+    delay: 2
     healingBeginSound:
       path: "/Audio/Adventure/Weapon/Melee/fuelswords/welderactivate.ogg"
       params:
@@ -101,12 +101,12 @@
       - Android
     damage:
       groups:
-        Brute: -60
+        Brute: -45
       types:
-        Heat: -20
-        Cold: -20
-        Shock: -20
-        Bloodloss: -20
+        Heat: -15
+        Cold: -15
+        Shock: -15
+        Bloodloss: -15
     ModifyBloodLevel: 30
     bloodlossModifier: -4
     delay: 1
@@ -115,7 +115,7 @@
     healingEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
   - type: Stack
-    stackType: AndroidPack
+    stackType: ExtraAndroidPack
     count: 4
   - type: StackPrice
     price: 5
@@ -137,7 +137,7 @@
       - Android
     damage:
       groups:
-        Brute: -25 # 5 for each type in the group
+        Brute: -20 # 5 for each type in the group
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
@@ -206,8 +206,8 @@
     damage:
       types:
         Heat: -8
-        Cold: -8
-        Shock: -8
+        Cold: -4
+        Shock: -6
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
     healingEndSound:
