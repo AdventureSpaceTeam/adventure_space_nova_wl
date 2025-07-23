@@ -17,7 +17,7 @@
     onActivate: false 
     activated: false 
     onUse: false 
-
+    
 - type: entity
   abstract: true
   save: false
@@ -57,9 +57,9 @@
         scaleByQuantity: true
         damage:
           types:
-            Heat: -0.75
-            Shock: -0.75
-            Cold: -0.75
+            Heat: -0.6
+            Shock: -0.5
+            Cold: -0.35
       - !type:PopupMessage
         type: Local
         visualType: Medium
@@ -77,8 +77,8 @@
   - type: Barotrauma
     damage:
       types:
-        Shock: 0.40
-    maxDamage: 100
+        Shock: 0.80
+    maxDamage: 140
   - type: Temperature
     heatDamageThreshold: 773.15
     coldDamageThreshold: 173
@@ -98,9 +98,10 @@
         Heat: 0.75
   - type: TemperatureSpeed
     thresholds:
-      233: 0.95
-      228: 0.9
-      225: 0.85
+      258: 0.95
+      233: 0.9
+      193: 0.85
+      123: 0.7
   - type: StatusEffects
     allowed:
       - Stun
@@ -188,7 +189,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 850
       behaviors:
       - !type:GibBehavior { }
       - !type:PlaySoundBehavior
@@ -198,11 +199,11 @@
     speedModifierThresholds:
       40: 0.9
       60: 0.8
-      80: 0.7
-      100: 0.45
-      120: 0.3
-      140: 0.2
-      160: 0.15
+      80: 0.6
+      100: 0.3
+      120: 0.2
+      140: 0.1
+      150: 0
   - type: Speech
     speechSounds: Alto
     speechVerb: Default
