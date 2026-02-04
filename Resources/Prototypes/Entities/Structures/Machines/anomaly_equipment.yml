@@ -250,7 +250,7 @@
   - type: Transform
     anchored: true
   - type: ApcPowerReceiver
-    powerLoad: 900
+    powerLoad: 1500
   - type: ExtensionCableReceiver
   - type: AmbientSound
     range: 5
@@ -264,7 +264,7 @@
       path: /Audio/Machines/anomaly_generate.ogg
     generatingFinishedSound:
       path: /Audio/Machines/beep.ogg
-    materialPerAnomaly: 15000
+    materialPerAnomaly: 9000
   - type: MaterialStorage
     whitelist:
       tags:
