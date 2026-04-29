@@ -211782,7 +211782,7 @@ entities:
     - type: Transform
       pos: 47.5,-4.5
       parent: 2
-- proto: SpawnPointBrigmedic
+- proto: SpawnPointBrigmedicAdven
   entities:
   - uid: 29812
     components:
