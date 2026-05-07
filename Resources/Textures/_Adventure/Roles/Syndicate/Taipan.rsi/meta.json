@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "made by .xD",
+  "size": {
+    "x": 8,
+    "y": 8
+  },
+  "states": [
+    {
+      "name": "SyndicateAtmos"
+    },
+    {
+      "name": "SyndicateBotanist"
+    },
+    {
+      "name": "SyndicateCargotech"
+    },
+    {
+      "name": "SyndicateChef"
+    },
+    {
+      "name": "SyndicateEngi"
+    },
+    {
+      "name": "SyndicateJanitor"
+    },
+    {
+      "name": "SyndicateMedic"
+    },
+    {
+      "name": "SyndicateRD"
+    },
+    {
+      "name": "SyndicateScientist"
+    },
+    {
+      "name": "SyndicateSec"
+    },
+    {
+      "name": "SyndicateSevice"
+    },
+    {
+      "name": "SyndicateTD"
+    },
+    {
+      "name": "SyndicateTO"
+    }
+  ]
+}

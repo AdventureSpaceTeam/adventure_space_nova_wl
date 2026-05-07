@@ -1,0 +1,61 @@
+- type: alertLevels
+  id: taipanAlerts
+  defaultLevel: green-taipan
+  levels:
+    green-taipan:
+      announcement: alert-level-green-taipan-announcement
+      sound: /Audio/_Adventure/Alerts/green_taipan.ogg
+      color: Green
+      forceEnableEmergencyLights: true
+      emergencyLightColor: Green
+      shuttleTime: 600
+    yellow-taipan:
+      announcement: alert-level-yellow-taipan-announcement
+      sound: /Audio/_Adventure/Alerts/yellow_taipan.ogg
+      color: Yellow
+      forceEnableEmergencyLights: true
+      emergencyLightColor: Goldenrod
+      shuttleTime: 600
+    white:
+      announcement: alert-level-white-announcement
+      sound: /Audio/_Adventure/Alerts/white.ogg
+      color: White
+      forceEnableEmergencyLights: true
+      emergencyLightColor: White
+      shuttleTime: 600
+    zeta:
+      announcement: alert-level-zeta-announcement
+      sound: /Audio/_Adventure/Alerts/yellow_taipan.ogg
+      color: PowderBlue
+      forceEnableEmergencyLights: true
+      emergencyLightColor: PowderBlue
+      shuttleTime: 600
+    omega:
+      announcement: alert-level-omega-announcement
+      sound: /Audio/_Adventure/Alerts/omega.ogg
+      color: "#fd5252"
+      forceEnableEmergencyLights: true
+      emergencyLightColor: "#fd5252"
+      shuttleTime: 600
+    audit:
+      announcement: alert-level-audit-announcement
+      selectable: false
+      sound: /Audio/_Adventure/Alerts/audit.ogg
+      disableSelection: true
+      color: "#7a8df3"
+      forceEnableEmergencyLights: true
+      emergencyLightColor: "#7a8df3"
+      shuttleTime: 600
+
+- type: entity
+  parent: SyndicateComputerComms
+  id: TaipanComputerComms
+  name: консоль связи Синдиката
+  description: Консоль, используемая для подачи объявлений на всю станцию посредством клавиатуры и изменения уровня угрозы.
+  components:
+  - type: CommunicationsConsole
+    title: comms-console-announcement-title-taipan
+    color: "#a02424"
+    canShuttle: false
+    announceSentBy: false # The title already says who they are.
+    sound: /Audio/Effects/alert.ogg
