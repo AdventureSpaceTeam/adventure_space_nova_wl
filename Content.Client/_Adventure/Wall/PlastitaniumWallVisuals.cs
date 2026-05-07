@@ -1,4 +1,4 @@
-namespace Content.Client.Wall;
+namespace Content.Client._Adventure.Wall;
 
 public enum PlastitaniumWallVisualLayers : byte
 {
