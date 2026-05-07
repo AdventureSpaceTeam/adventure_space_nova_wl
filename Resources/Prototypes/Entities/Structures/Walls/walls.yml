@@ -547,8 +547,8 @@
     - type: Appearance
     - type: GenericVisualizer
       visuals:
-        enum.PlastitaniumWallVisuals.DeconstructionStage:
-          PlastitaniumWallVisualLayers.Deconstruction:
+        enum.ReinforcedWallVisuals.DeconstructionStage:
+          ReinforcedWallVisualLayers.Deconstruction:
             -1: { visible: false }
             0: { state: plastitanium_construct-0, visible: true}
             1: { state: plastitanium_construct-1, visible: true}
