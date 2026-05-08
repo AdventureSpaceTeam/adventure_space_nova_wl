@@ -21,3 +21,513 @@
   roles:
   - Syndie
   editorHidden: true
+
+- type: job
+  id: TelecommunicationOfficer
+  name: Офицер Телекоммуникаций
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: TelecommunicationOfficer
+  setPreference: false
+  icon: "JobIconTO"
+  canBeAntag: true
+  access:
+    - NuclearOperative
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: TelecommunicationOfficer
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconTO
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateTO
+  jobName: Офицер Телекоммуникаций
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: TOIDCard
+  name: ID-карта офицера телекоммуникаций
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: TelecommunicationOfficer
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent
+    - NuclearOperative
+
+- type: job
+  id: ResearchDirectorTaipan
+  name: Директор Исследований
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: ResearchDirectorTaipan
+  setPreference: false
+  icon: "JobIconRD"
+  canBeAntag: true
+  access:
+    - NuclearOperative
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: ResearchDirectorTaipan
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconRD
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateRD
+  jobName: Директор Исследований
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: RDTaipanIDCard
+  name: ID-карта директора исследований
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: ResearchDirectorTaipan
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent
+    - NuclearOperative
+
+- type: job
+  id: TechnicalDirector
+  name: Руководитель Техобеспечения
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: TechnicalDirector
+  setPreference: false
+  icon: "JobIconTD"
+  canBeAntag: true
+  access:
+    - NuclearOperative
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: TechnicalDirector
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconTD
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateTD
+  jobName: Руководитель Техобеспечения
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: TDIDCard
+  name: ID-карта руководителя техобеспечения
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: TechnicalDirector
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent
+    - NuclearOperative
+
+- type: job
+  id: AtmosTaipan
+  name: Атмосферный инженер Синдиката
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: AtmosTaipan
+  setPreference: false
+  icon: "JobIconAtmosTaipan"
+  canBeAntag: true
+  access:
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: AtmosTaipan
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconAtmosTaipan
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateAtmos
+  jobName: Атмосферный инженер Синдиката
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: AtmosTaipanIDCard
+  name: ID-карта атмосферного инженера Синдиката
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: AtmosTaipan
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent
+
+- type: job
+  id: EngiTaipan
+  name: Техник Синдиката
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: EngiTaipan
+  setPreference: false
+  icon: "JobIconEngTaipan"
+  canBeAntag: true
+  access:
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: EngiTaipan
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconEngTaipan
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateEngi
+  jobName: Техник Синдиката
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: EngiTaipanIDCard
+  name: ID-карта техника Синдиката
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: EngiTaipan
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent
+
+- type: job
+  id: ResearcherTaipan
+  name: Исследователь Синдиката
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: ResearcherTaipan
+  setPreference: false
+  icon: "JobIconResearcherTaipan"
+  canBeAntag: true
+  access:
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: ResearcherTaipan
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconResearcherTaipan
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateScientist
+  jobName: Исследователь Синдиката
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: ResearcherTaipanIDCard
+  name: ID-карта исследователя Синдиката
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: ResearcherTaipan
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent
+
+- type: job
+  id: CargotechTaipan
+  name: Карготехник Синдиката
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: CargotechTaipan
+  setPreference: false
+  icon: "JobIconCargotechTaipan"
+  canBeAntag: true
+  access:
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: CargotechTaipan
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCargotechTaipan
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateCargotech
+  jobName: Карготехник Синдиката
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: CargotechTaipanIDCard
+  name: ID-карта карготехника Синдиката
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: CargotechTaipan
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent
+
+- type: job
+  id: ChefTaipan
+  name: Повар Синдиката
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: ChefTaipan
+  setPreference: false
+  icon: "JobIconChefTaipan"
+  canBeAntag: true
+  access:
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: ChefTaipan
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconChefTaipan
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateChef
+  jobName: Повар Синдиката
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: ChefTaipanIDCard
+  name: ID-карта повара Синдиката
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: ChefTaipan
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent
+
+- type: job
+  id: BotanistTaipan
+  name: Ботаник Синдиката
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: BotanistTaipan
+  setPreference: false
+  icon: "JobIconBotanistTaipan"
+  canBeAntag: true
+  access:
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: BotanistTaipan
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconBotanistTaipan
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateBotanist
+  jobName: Ботаник Синдиката
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: BotanistTaipanIDCard
+  name: ID-карта ботаника Синдиката
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: BotanistTaipan
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent
+
+- type: job
+  id: MedicTaipan
+  name: Медик Синдиката
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: MedicTaipan
+  setPreference: false
+  icon: "JobIconMedicTaipan"
+  canBeAntag: true
+  access:
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: MedicTaipan
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedicTaipan
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateMedic
+  jobName: Медик Синдиката
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: MedicTaipanIDCard
+  name: ID-карта медика Синдиката
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: MedicTaipan
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent
+
+- type: job
+  id: SecOffTaipan
+  name: Офицер безопасности Синдиката
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: SecOffTaipan
+  setPreference: false
+  icon: "JobIconSecOffTaipan"
+  canBeAntag: true
+  access:
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: SecOffTaipan
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSecOffTaipan
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateSec
+  jobName: Офицер безопасности Синдиката
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: SecOffTaipanIDCard
+  name: ID-карта офицера безопасности Синдиката
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: SecOffTaipan
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent
+
+- type: job
+  id: ServiceTaipan
+  name: Сервисный работник Синдиката
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: ServiceTaipan
+  setPreference: false
+  icon: "JobIconServiceTaipan"
+  canBeAntag: true
+  access:
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: ServiceTaipan
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconServiceTaipan
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateSevice
+  jobName: Сервисный работник Синдиката
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: ServiceTaipanIDCard
+  name: ID-карта сервисного работника Синдиката
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: ServiceTaipan
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent
+
+- type: job
+  id: ServiceTaipan
+  name: Сервисный работник Синдиката
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: ServiceTaipan
+  setPreference: false
+  icon: "JobIconServiceTaipan"
+  canBeAntag: true
+  access:
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: ServiceTaipan
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconServiceTaipan
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateSevice
+  jobName: Сервисный работник Синдиката
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: ServiceTaipanIDCard
+  name: ID-карта сервисного работника Синдиката
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: ServiceTaipan
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent
+
+- type: job
+  id: JanitorTaipan
+  name: Уборщик Синдиката
+  description: Восславьте синдикат и несите свободу на станции капиталистов!
+  playTimeTracker: JanitorTaipan
+  setPreference: false
+  icon: "JobIconJanitorTaipan"
+  canBeAntag: true
+  access:
+    - SyndicateAgent
+
+- type: playTimeTracker
+  id: JanitorTaipan
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconJanitorTaipan
+  icon:
+    sprite: /Textures/_Adventure/Roles/Syndicate/Taipan.rsi
+    state: SyndicateJanitor
+  jobName: Сервисный работник Синдиката
+
+- type: entity
+  parent: [ SyndicateIDCard, BaseSyndicateContraband ]
+  id: JanitorTaipanIDCard
+  name: ID-карта уборщика Синдиката
+  description: Карта, необходимая для доступа к различным областям станции.
+  components:
+  - type: PresetIdCard
+    job: JanitorTaipan
+  - type: Item
+    heldPrefix: black
+  - type: Access
+    tags:
+    - SyndicateAgent

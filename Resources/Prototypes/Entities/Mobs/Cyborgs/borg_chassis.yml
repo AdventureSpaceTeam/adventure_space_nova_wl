@@ -140,6 +140,7 @@
         tags:
           - BorgModuleGeneric
           - BorgModuleMedical
+          - BorgModuleService #ADV
           - BorgModuleSyndicate
       hasMindState: synd_medical_e
       noMindState: synd_medical
@@ -184,6 +185,8 @@
         tags:
           - BorgModuleGeneric
           - BorgModuleEngineering
+          - BorgModuleScience #ADV
+          - BorgModuleJanitor #ADV
           - BorgModuleSyndicate
       hasMindState: synd_engi_e
       noMindState: synd_engi

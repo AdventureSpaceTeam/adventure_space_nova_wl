@@ -91,6 +91,28 @@
     sprite: _Adventure/Objects/Clothing/taipan/chef/chefhat.rsi
 
 - type: entity
+  parent: [ ClothingOuterEnvirosuitBase, BaseSyndicateContraband ]
+  id: ClothingOuterEnvirosuitBaseSyndie
+  name: базовый защитный костюм Синдиката
+  description: Герметичный костюм, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/taipan/commonplasma/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/taipan/commonplasma/suit.rsi
+
+- type: entity
+  parent: [ ClothingHeadEnvirosuitBase, ClothingHeadSuitWithLightBase, BaseSyndicateContraband ]
+  id: ClothingHeadEnvirosuitBaseSyndie
+  name: базовый защитный шлем Синдиката
+  description: Герметичный шлем, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/taipan/commonplasma/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/taipan/commonplasma/helmet.rsi
+
+- type: entity
   parent: [ ClothingOuterCoatLab, BaseSyndicateContraband ]
   id: ClothingOuterCoatLabTaipan
   name: лабораторный халат Interdyne
@@ -190,6 +212,28 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterEnvirosuitEngineering, BaseSyndicateContraband]
+  id: ClothingOuterEnvirosuitEngineeringSyndie
+  name: инженерный защитный костюм Синдиката
+  description: Герметичный костюм, предназначенный для использования плазмалюдами во время инженерных работ.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/taipan/repairman/plasmasuit/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/taipan/repairman/plasmasuit/suit.rsi
+
+- type: entity
+  parent: [ClothingHeadEnvirosuitEngineering, BaseSyndicateContraband]
+  id: ClothingHeadEnvirosuitEngineeringSyndie
+  name: инженерный защитный шлем Синдиката
+  description: Герметичный шлем, предназначенный для использования плазмалюдами.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/taipan/repairman/plasmasuit/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/taipan/repairman/plasmasuit/helmet.rsi
 
 - type: entity
   parent: [ ClothingOuterStorageFoldableBase, BaseSyndicateContraband ]
@@ -366,6 +410,26 @@
     sprite: _Adventure/Objects/Clothing/taipan/technical_director/syndie_cemantle.rsi
 
 - type: entity
+  parent: [ClothingOuterEnvirosuitCE, BaseSyndicateContraband]
+  id: ClothingOuterEnvirosuitTechnicalDirector
+  name: защитный костюм руководителя техобеспечения
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/taipan/technical_director/plasmasuit/suit.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/taipan/technical_director/plasmasuit/suit.rsi
+
+- type: entity
+  parent: [ClothingHeadEnvirosuitCE, BaseSyndicateContraband]
+  id: ClothingHeadEnvirosuitTechnicalDirector
+  name: защитный шлем руководителя техобеспечения
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/taipan/technical_director/plasmasuit/helmet.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/taipan/technical_director/plasmasuit/helmet.rsi
+
+- type: entity
   parent: [ ClothingHeadBase, BaseSyndicateContraband ]
   id: ClothingHeadHatCapTO
   name: фуражка офицера телекоммуникаций
@@ -398,6 +462,17 @@
         Slash: 0.5
         Piercing: 0.6
         Heat: 0.5
+
+- type: entity
+  parent: [ ClothingNeckBase, BaseSyndicateContraband ]
+  id: ClothingNeckMantleTOTaipan
+  name: мантия офицера телекоммуникаций
+  description: Легкая мантия с тяжелым бременем и с символикой тех, кто отказывается следовать правилам. Раз вы это носите, значит Синдикат очень в вас нуждается.
+  components:
+  - type: Sprite
+    sprite: _Adventure/Objects/Clothing/taipan/telecom_officer/syndie_mantle_to.rsi
+  - type: Clothing
+    sprite: _Adventure/Objects/Clothing/taipan/telecom_officer/syndie_mantle_to.rsi
 
 - type: entity
   parent: [ ClothingUniformBase, BaseSyndicateContraband ]

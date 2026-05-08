@@ -1,0 +1,545 @@
+- type: entity
+  name: AzaraBlank
+  parent: Paper
+  id: AzaraBlank
+  description: "Бланк, используемый корпорацией Азара Клининг."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#8bbee9"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#8bbee9"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/AzaraBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#8bbee9"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: ChangsBlank
+  parent: Paper
+  id: ChangsBlank
+  description: "Бланк, используемый корпорацией Мистера Чанга."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#545463"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#545463"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/ChangsBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#545463"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: ConarexBlank
+  parent: Paper
+  id: ConarexBlank
+  description: "Бланк, используемый корпорацией Конарекс."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#7092BF"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#7092BF"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/ConarexBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#7092BF"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: CyberSunBlank
+  parent: Paper
+  id: CyberSunBlank
+  description: "Бланк, используемый корпорацией Киберсан."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#c3c3c3"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#c3c3c3"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/CyberSunBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#c3c3c3"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: DonkBlank
+  parent: Paper
+  id: DonkBlank
+  description: "Бланк, используемый корпорацией ДонкКо."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#EEA70D"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#EEA70D"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/DonkBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#EEA70D"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: DrunkMastersBlank
+  parent: Paper
+  id: DrunkMastersBlank
+  description: "Бланк, используемый корпорацией Дранк Мастерс."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#40aad4"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#40aad4"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/DrunkMastersBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#40aad4"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: FunnyBlank
+  parent: Paper
+  id: FunnyBlank
+  description: "Бланк, используемый корпорацией....а?"
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#ffffff"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#ffffff"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/FunnyBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#ffffff"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: GasDefBlank
+  parent: Paper
+  id: GasDefBlank
+  description: "Бланк, используемый корпорацией ГазДеф."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#7a7a7a"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#7a7a7a"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/GasDefBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#7a7a7a"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: GefestBlank
+  parent: Paper
+  id: GefestBlank
+  description: "Бланк, используемый корпорацией Гефест."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#ffffff"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#ffffff"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/GefestBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#ffffff"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: GorlexBlank
+  parent: Paper
+  id: GorlexBlank
+  description: "Бланк, используемый ООО Горлекс."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#545463"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#545463"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/GorlexBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#545463"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: HoundBlank
+  parent: Paper
+  id: HoundBlank
+  description: "Бланк, используемый корпорацией Хаунд."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#7f0000"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#7f0000"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/HoundBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#7f0000"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: InterGalBlank
+  parent: Paper
+  id: InterGalBlank
+  description: "Бланк, используемый корпорацией ИнтерГалактик."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#f2b448"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#f2b448"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/InterGalBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#f2b448"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: InterPharmBlank
+  parent: Paper
+  id: InterPharmBlank
+  description: "Бланк, используемый корпорацией ИнтерФарм."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#ffffff"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#ffffff"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/InterPharmBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#ffffff"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: KosmologistikaBlank
+  parent: Paper
+  id: KosmologistikaBlank
+  description: "Бланк, используемый корпорацией Космологистика."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#50654C"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#50654C"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/KosmologisticaBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#50654C"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: NakamuraBlank
+  parent: Paper
+  id: NakamuraBlank
+  description: "Бланк, используемый корпорацией Накамура Инжениринг."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#FFA55F"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#FFA55F"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/NakamuraBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#FFA55F"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: RobustBlank
+  parent: Paper
+  id: RobustBlank
+  description: "Бланк, используемый ООО Робаст Инд."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#8bbee9"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#8bbee9"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/RobustBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#8bbee9"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: SaibasanBlank
+  parent: Paper
+  id: SaibasanBlank
+  description: "Бланк, используемый корпорацией Сайбасан."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#14803f"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#14803f"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/SaibasanBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#14803f"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: ShadyBlank
+  parent: Paper
+  id: ShadyBlank
+  description: "Бланк, используемый корпорацией Сигареты Шейди."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#514d54"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#514d54"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/ShadyBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#514d54"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: SyndieBlank
+  parent: Paper
+  id: SyndieBlank
+  description: "Бланк, используемый ненавистниками бюрократии."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#b04243"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#b04243"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/Interface/Paper/paper_heading_syndicate_logo.svg.96dpi.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#b04243"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: VitezstviBlank
+  parent: Paper
+  id: VitezstviBlank
+  description: "Бланк, используемый корпорацией Витезтви."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#dbd6d6"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#dbd6d6"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/VitezstviBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#dbd6d6"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
+
+- type: entity
+  name: WaffleBlank
+  parent: Paper
+  id: WaffleBlank
+  description: "Бланк, используемый корпорацией ВаффлКо."
+  components:
+  - type: Sprite
+    layers:
+    - state: paper
+      color: "#f3fcc0"
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      color: "#f3fcc0"
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperLabelType
+    paperType: CaptainsPaper
+  - type: PaperVisuals
+    headerImagePath: "/Textures/_Adventure/Objects/Papers/Blanks/WaffleBlank.png"
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"
+    backgroundModulate: "#f3fcc0"
+    backgroundPatchMargin: 16.0, 16.0, 16.0, 16.0
+    contentMargin: 32.0, 16.0, 32.0, 0.0
