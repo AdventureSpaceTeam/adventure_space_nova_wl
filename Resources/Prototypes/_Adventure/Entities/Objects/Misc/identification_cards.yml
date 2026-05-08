@@ -1,0 +1,293 @@
+- type: entity
+  parent: [ IDCardStandard, BaseSyndicateContraband ]
+  id: SyndiTaipanTelecommunicationsOfficerIDCard
+  name: ID карта офицера телекоммуникаций тайпана/DS-2 #Наименование карты в списке
+  components:
+  - type: IdCard
+    jobTitle: Telecommunications Officer Taipan #Должность при осмотре
+    jobIcon: JobIconTelecommunicationsOfficer
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: &color-syndicate-top "#e80c0c"
+    - state: stripe_bottom
+      color: &color-syndicate-bottom "#960606"
+    - sprite: _Adventure/Interface/Misc/job_icons.rsi
+      offset: &icon-offset -0.455, -0.280
+      state: trim_ds2admiral
+  - type: Access
+    groups:
+      - AllAccess
+    tags:
+      - SyndicateAgent #По запросу синди доступ выдан главам и СБ (тайпан)
+      - NuclearOperative
+      
+- type: entity
+  parent: [ IDCardStandard, BaseSyndicateContraband ]
+  id: SyndiTaipanRDIDCard
+  name: ID карта директора исследований тайпана/DS-2
+  components:
+  - type: IdCard
+    jobTitle: Директор Исследований Тайпана
+    jobIcon: JobIconDS2DirectorSyndi
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: *color-syndicate-top
+    - state: stripe_bottom
+      color: *color-syndicate-bottom
+    - sprite: _Adventure/Interface/Misc/job_icons.rsi
+      offset: *icon-offset
+      state: trim_ds2corporateliaison
+  - type: Access
+    tags:
+      - SyndicateAgent
+      - NuclearOperative
+      - External
+      - Medical
+      - Chemistry
+      - Research
+
+- type: entity
+  parent: [ IDCardStandard, BaseSyndicateContraband ]
+  id: SyndiTaipanCEIDCard
+  name: ID карта руководителя техобеспечения тайпана/DS-2
+  components:
+  - type: IdCard
+    jobTitle: Руководитель техобеспечения Тайпана
+    jobIcon: JobIconDS2CESyndi
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: *color-syndicate-top
+    - state: stripe_bottom
+      color: *color-syndicate-bottom
+    - sprite: _Adventure/Interface/Misc/job_icons.rsi
+      offset: *icon-offset
+      state: trim_ds2ce
+  - type: Access
+    tags:
+      - SyndicateAgent
+      - NuclearOperative
+      - External
+      - Engineering
+      - Atmospherics
+      - Cargo
+      - Salvage
+
+- type: entity
+  parent: [ IDCardStandard, BaseSyndicateContraband ]
+  id: SyndiTaipanMedicalOfficerIDCard
+  name: ID карта медика синдиката тайпана/DS-2
+  components:
+  - type: IdCard
+    jobTitle: Медик Тайпана
+    jobIcon: JobIconDS2MedicalOfficer
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: *color-syndicate-top
+    - state: stripe_bottom
+      color: *color-syndicate-bottom
+    - sprite: _Adventure/Interface/Misc/job_icons.rsi
+      offset: *icon-offset
+      state: trim_ds2medicalofficer
+  - type: Access
+    tags:
+      - Maintenance
+      - External
+      - Medical
+      - Chemistry
+
+- type: entity
+  parent: [ IDCardStandard, BaseSyndicateContraband ]
+  id: SyndiTaipanOfficerIDCard
+  name: ID карта оперативника тайпана/DS-2
+  components:
+  - type: IdCard
+    jobTitle: Оперативник Тайпана
+    jobIcon: JobIconDS2Officer
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: *color-syndicate-top
+    - state: stripe_bottom
+      color: *color-syndicate-bottom
+    - sprite: _Adventure/Interface/Misc/job_icons.rsi
+      offset: *icon-offset
+      state: trim_ds2brigofficer
+  - type: Access
+    tags:
+      - Maintenance
+      - External
+      - Detective
+      - Brig
+      - Security
+      - Armory
+      - SyndicateAgent
+      - NuclearOperative
+
+- type: entity
+  parent: [ IDCardStandard, BaseSyndicateContraband ]
+  id: SyndiTaipanEngineerIDCard
+  name: ID карта инженера тайпана/DS-2
+  components:
+  - type: IdCard
+    jobTitle: Техник Тайпана
+    jobIcon: JobIconDS2Engineer
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: *color-syndicate-top
+    - state: stripe_bottom
+      color: *color-syndicate-bottom
+    - sprite: _Adventure/Interface/Misc/job_icons.rsi
+      offset: *icon-offset
+      state: trim_ds2enginetech
+  - type: Access
+    tags:
+      - Maintenance
+      - External
+      - Engineering
+      - Atmospherics
+
+- type: entity
+  parent: [ IDCardStandard, BaseSyndicateContraband ]
+  id: SyndiTaipanMinerIDCard
+  name: ID карта утиля тайпана/DS-2
+  components:
+  - type: IdCard
+    jobTitle: Карготехник Тайпана
+    jobIcon: JobIconDS2Miner
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: *color-syndicate-top
+    - state: stripe_bottom
+      color: *color-syndicate-bottom
+    - sprite: _Adventure/Interface/Misc/job_icons.rsi
+      offset: *icon-offset
+      state: trim_ds2miningofficer
+  - type: Access
+    tags:
+      - Maintenance
+      - External
+      - Cargo
+      - Salvage
+
+- type: entity
+  parent: [ IDCardStandard, BaseSyndicateContraband ]
+  id: SyndiTaipanResearcherIDCard
+  name: ID карта учёного тайпана/DS-2
+  components:
+  - type: IdCard
+    jobTitle: Учёный Тайпана
+    jobIcon: JobIconDS2Researcher
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: *color-syndicate-top
+    - state: stripe_bottom
+      color: *color-syndicate-bottom
+    - sprite: _Adventure/Interface/Misc/job_icons.rsi
+      offset: *icon-offset
+      state: trim_ds2researcher
+  - type: Access
+    tags:
+      - Maintenance
+      - External
+      - Research
+
+- type: entity
+  parent: [ IDCardStandard, BaseSyndicateContraband ]
+  id: SyndiTaipanStaffIDCard
+  name: ID карта сервистного работника тайпана/DS-2
+  components:
+  - type: IdCard
+    jobTitle: Сервистный работник Тайпана
+    jobIcon: JobIconDS2Staff
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: *color-syndicate-top
+    - state: stripe_bottom
+      color: *color-syndicate-bottom
+    - sprite: _Adventure/Interface/Misc/job_icons.rsi
+      offset: *icon-offset
+      state: trim_ds2generalstaff
+  - type: Access #Сервисный персонал Тайпана наследует этот уровень
+    tags:
+      - Maintenance
+      - External
+      - Bar
+      - Service
+      - Janitor
+      - Theatre
+      - Kitchen
+      - Chapel
+      - Hydroponics
+      - Lawyer
+
+- type: entity
+  parent: [ IDCardStandard, BaseSyndicateContraband ]
+  id: SyndiTaipanPrisonerIDCard
+  name: ID карта заключённого тайпана/DS-2
+  components:
+  - type: IdCard
+    jobTitle: Заключёный Тайпана
+    jobIcon: JobIconDS2Prisoner
+  - type: Sprite
+    layers:
+    - state: black
+    - state: stripe_top
+      color: *color-syndicate-top
+    - state: stripe_bottom
+      color: *color-syndicate-bottom
+    - sprite: _Adventure/Interface/Misc/job_icons.rsi
+      offset: *icon-offset
+      state: trim_ds2prisoner
+
+- type: entity
+  parent: [ SyndiTaipanEngineerIDCard, BaseSyndicateContraband ]
+  id: SyndiTaipanAtmosIDCard
+  name: ID карта атмоса тайпана/DS-2 #Могли бы обойтись и инженерами
+  components:
+  - type: IdCard
+    jobTitle: Атмосферный инженер Тайпана
+    jobIcon: JobIconDS2Engineer
+
+- type: entity
+  parent: [ SyndiTaipanStaffIDCard, BaseSyndicateContraband ]
+  id: SyndiTaipanChefIDCard
+  name: ID карта повара тайпана/DS-2
+  components:
+  - type: IdCard
+    jobTitle: Повар Тайпана
+    jobIcon: JobIconDS2Staff
+
+- type: entity
+  parent: [ SyndiTaipanStaffIDCard, BaseSyndicateContraband ]
+  id: SyndiTaipanCleanerIDCard
+  name: ID карта уборщика тайпана/DS-2
+  components:
+  - type: IdCard
+    jobTitle: Уборщик Тайпана
+    jobIcon: JobIconDS2Staff
+
+- type: entity
+  parent: [ SyndiTaipanStaffIDCard, BaseSyndicateContraband ]
+  id: SyndiTaipanBotanicIDCard
+  name: ID карта ботаника тайпана/DS-2
+  components:
+  - type: IdCard
+    jobTitle: Ботаник Тайпана
+    jobIcon: JobIconDS2Staff

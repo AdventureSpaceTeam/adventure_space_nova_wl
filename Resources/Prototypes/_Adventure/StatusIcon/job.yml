@@ -1,0 +1,69 @@
+﻿- type: jobIcon
+  parent: JobIcon
+  id: JobIconTelecommunicationsOfficer
+  icon:
+    sprite: /Textures/_Adventure/Interface/Misc/job_icons.rsi
+    state: trim_ds2admiral
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDS2DirectorSyndi
+  icon:
+    sprite: /Textures/_Adventure/Interface/Misc/job_icons.rsi
+    state: trim_ds2corporateliaison
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDS2CESyndi
+  icon:
+    sprite: /Textures/_Adventure/Interface/Misc/job_icons.rsi
+    state: trim_ds2ce
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDS2MedicalOfficer
+  icon:
+    sprite: /Textures/_Adventure/Interface/Misc/job_icons.rsi
+    state: trim_ds2medicalofficer
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDS2Officer
+  icon:
+    sprite: /Textures/_Adventure/Interface/Misc/job_icons.rsi
+    state: trim_ds2brigofficer
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDS2Engineer
+  icon:
+    sprite: /Textures/_Adventure/Interface/Misc/job_icons.rsi
+    state: trim_ds2enginetech
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDS2Miner
+  icon:
+    sprite: /Textures/_Adventure/Interface/Misc/job_icons.rsi
+    state: trim_ds2miningofficer
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDS2Researcher
+  icon:
+    sprite: /Textures/_Adventure/Interface/Misc/job_icons.rsi
+    state: trim_ds2researcher
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDS2Staff
+  icon:
+    sprite: /Textures/_Adventure/Interface/Misc/job_icons.rsi
+    state: trim_ds2generalstaff
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconDS2Prisoner
+  icon:
+    sprite: /Textures/_Adventure/Interface/Misc/job_icons.rsi
+    state: trim_ds2prisoner

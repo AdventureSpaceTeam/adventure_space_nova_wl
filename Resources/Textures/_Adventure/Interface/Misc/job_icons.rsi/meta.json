@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "license": "GNU-AGPL-v3",
+  "copyright": "Taken from https://github.com/NovaSector/NovaSector. Модифицировал иконку инженера Nazar_TR42 для СЕ",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "trim_ds2admiral"
+    },
+    {
+      "name": "trim_ds2masteratarms"
+    },
+    {
+      "name": "trim_ds2corporateliaison"
+    },
+	{
+      "name": "trim_ds2ce"
+    },
+    {
+      "name": "trim_ds2miningofficer"
+    },
+    {
+      "name": "trim_ds2brigofficer"
+    },
+    {
+      "name": "trim_ds2medicalofficer"
+    },
+    {
+      "name": "trim_ds2enginetech"
+    },
+    {
+      "name": "trim_ds2researcher"
+    },
+    {
+      "name": "trim_ds2generalstaff"
+    },
+    {
+      "name": "trim_ds2prisoner"
+    }
+  ]
+}
