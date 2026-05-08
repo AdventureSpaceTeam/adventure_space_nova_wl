@@ -567,6 +567,10 @@
       node: plastitaniumWall
     - type: StaticPrice
       price: 250
+    - type: RCDDeconstructable #Adventure
+      deviceType: Disassembler
+      cost: 8
+      delay: 15
       #ADV END
 
 - type: entity
@@ -687,7 +691,7 @@
         layer:
         - WallLayer
         density: 2000
-  - type: RCDDeconstructable
+  - type: RCDDeconstructable #Adventure
     deviceType: Disassembler
     cost: 5
     delay: 8
