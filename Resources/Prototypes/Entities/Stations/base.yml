@@ -141,7 +141,7 @@
   abstract: true
   components:
     - type: AlertLevel
-      alertLevelPrototype: taipanAlerts #ВРЕМЕННАЯ МЕРА НА СМЕНУ ТАЙПАНА!!!
+      alertLevelPrototype: stationAlerts
 
 - type: entity
   id: BaseStationExpeditions
