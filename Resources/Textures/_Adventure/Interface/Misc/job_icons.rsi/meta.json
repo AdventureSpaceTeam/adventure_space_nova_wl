@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "license": "GNU-AGPL-v3",
-  "copyright": "Taken from https://github.com/NovaSector/NovaSector. Модифицировал иконку инженера Nazar_TR42 для СЕ",
+  "license": "CC BY-SA 3.0",
+  "copyright": "Taken from https://github.com/NovaSector/NovaSector. Модифицировал иконки Nazar_TR42",
   "size": {
-    "x": 32,
-    "y": 32
+    "x": 8,
+    "y": 8
   },
   "states": [
     {
