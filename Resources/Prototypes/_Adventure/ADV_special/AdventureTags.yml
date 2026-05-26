@@ -44,4 +44,8 @@
   id: CleanBot
 
 - type: Tag # Маркирует чертежи сугубо для синдилата
-  id: BlueprintSyndielathe 
+  id: BlueprintSyndielathe
+
+#Vox edible
+- type: Tag
+  id: Circuitboard

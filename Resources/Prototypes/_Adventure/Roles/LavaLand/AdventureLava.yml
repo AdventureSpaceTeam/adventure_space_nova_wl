@@ -195,12 +195,12 @@
       count: 30
       minGroupSize: 10
       maxGroupSize: 15
-    - !type:OreDunGen
-      replacement: WallRockBasalt
-      entity: WallRockBasaltSalt
-      count: 30
-      minGroupSize: 8
-      maxGroupSize: 12
+    # - !type:OreDunGen
+    #   replacement: WallRockBasalt
+    #   entity: WallRockBasaltSalt
+    #   count: 30
+    #   minGroupSize: 8
+    #   maxGroupSize: 12
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: WallRockBasaltGold
@@ -267,6 +267,12 @@
       count: 50
       minGroupSize: 8
       maxGroupSize: 15
+    - !type:OreDunGen
+      replacement: WallRockBasalt
+      entity: WallRockBasaltBluespace
+      count: 15
+      minGroupSize: 3
+      maxGroupSize: 6
     - !type:OreDunGen
       replacement: WallRockBasalt
       entity: BasaltRandomLava
